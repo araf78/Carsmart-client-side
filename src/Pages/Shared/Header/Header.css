@@ -1,0 +1,14 @@
+.smart{
+    color: #cf2e2e;
+}
+.header a{
+    color:rgb(44, 36, 36);
+    margin-right: 60px;
+    font-size: 20px;
+     text-decoration: none;
+     font-weight: 500;
+
+}
+.header a:hover{
+    color: #cf2e2e;
+}
