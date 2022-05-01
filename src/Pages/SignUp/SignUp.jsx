@@ -4,7 +4,7 @@ import { ImGoogle } from "react-icons/im";
 
 const SignUp = () => {
     return (
-        <div className="login-container w-75 mx-auto mt-3 rounded-2">
+        <div className="login-container w-75 mx-auto mt-3 p-3 rounded-2">
       <h2 className="text-white pt-3 fs-1">Sign up</h2>
       <form>
         <input
@@ -22,13 +22,13 @@ const SignUp = () => {
         />
         <br />
         <input
-          className="w-50 mt-3 mb-3 py-1 px-3 fs-3 rounded"
+          className="w-50 mt-3 py-1 px-3 fs-3 rounded"
           type="password"
           name="password"
           placeholder="Password"
         />
       </form>
-      <div className="d-flex flex-column w-25 mx-auto mb-3">
+      <div className="d-flex flex-column w-25  mt-4 mx-auto mb-3">
         <button
           className=" mt-3 mb-3 py-2 px-3 fs-3 rounded"
           type="button"

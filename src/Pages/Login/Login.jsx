@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <div className="login-container w-75 mx-auto mt-3 rounded-2">
+    <div className="login-container w-75 mx-auto p-3 rounded-2">
       <h2 className="text-white pt-3 fs-1">Login</h2>
       <form>
         <input
@@ -22,22 +22,22 @@ const Login = () => {
           placeholder="Password"
         />
       </form>
-      <div className="d-flex flex-column w-50 mx-auto mb-3">
+      <div className="d-flex flex-column w-50 mx-auto mt-3 mb-3">
           {/* login button  */}
         <button
-          className=" mt-3 mb-3 py-1 px-3 fs-3 rounded"
+          className="  py-1 px-3 fs-4 rounded"
           type="button"
           class="btn btn-light"
         >
           Login
         </button>
 
-        <p className="text-white">You have not an account? or <Link className="text-white" to="/signup"><small>create account</small></Link></p>
+        <p className="text-white mt-3">You have not an account? or <Link className="text-white" to="/signup"><small>create account</small></Link></p>
 
         <h4 className="text-white mt-5 fs-5">or log With</h4>
         {/* google login  */}
         <button
-          className=" mt-3 mb-3  py-1 px-3 align-items-center fs-3 rounded"
+          className=" mt-3 py-1 px-3 align-items-center fs-3 rounded"
           type="button"
           class="btn btn-light"
         >
