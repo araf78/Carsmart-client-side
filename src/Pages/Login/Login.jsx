@@ -13,6 +13,7 @@ const Login = () => {
           type="email"
           name="email"
           placeholder="Your Email"
+          required
         />
         <br />
         <input
@@ -20,6 +21,7 @@ const Login = () => {
           type="password"
           name="password"
           placeholder="Password"
+          required
         />
       </form>
       <div className="d-flex flex-column w-50 mx-auto mt-3 mb-3">
