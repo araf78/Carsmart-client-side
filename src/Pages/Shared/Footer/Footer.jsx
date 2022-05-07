@@ -6,7 +6,7 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-        <footer className='footer d-flex justify-content-around  '>
+        <footer className='footer mt-5 d-flex justify-content-around  '>
             <p>©  {(new Date().getFullYear())} Carsmart. All Rights Reserved.</p>
             <div className='flex justify-content-center align-items-center'>
                <span>Follow us</span>
