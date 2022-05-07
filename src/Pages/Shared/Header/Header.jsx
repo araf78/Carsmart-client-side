@@ -9,9 +9,8 @@ const auth = getAuth(app);
 
 const Header = () => {
   const [user] = useAuthState(auth);
-  console.log(user)
   return (
-    <nav className='header d-flex justify-content-around  align-items-center'>
+    <nav className=' header d-flex justify-content-around m-4  align-items-center'>
       <h2 className="fs-1 fw-bold">
         Cars<span className="smart">mart</span>
       </h2>
@@ -25,6 +24,7 @@ const Header = () => {
           :
         <Link to="/login">Login</Link>
         }
+        <Link to="/*"></Link>
       </div>
     </nav>
   );
