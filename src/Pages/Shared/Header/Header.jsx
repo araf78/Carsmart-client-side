@@ -16,7 +16,7 @@ const Header = () => {
       </h2>
       <div className='fs-4'>
         <Link to="/">Home</Link>
-        <Link to="/services">Services</Link>
+        <Link to="/inventory">Inventory</Link>
         <Link to="/blogs">Blogs</Link>
         {
           user?.uid ? 
