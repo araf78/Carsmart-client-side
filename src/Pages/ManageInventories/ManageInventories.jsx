@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import '../../Pages/./Shared/Header/Header.css'
 
 const ManageInventories = () => {
@@ -10,6 +11,7 @@ const ManageInventories = () => {
       .then((data) => setInventories(data));
   }, []);
 
+  // delete item 
   const handleUserDelete = id =>{
     const proceed = confirm('Are you sure you want to delete?');
     if(proceed){
@@ -20,7 +22,7 @@ const ManageInventories = () => {
         .then(res => res.json())
         .then(data =>{
             if(data.deletedCount > 0){
-              const remaining = users.filter(item => item._id !== id);
+              const remaining = inventories.filter(item => item._id !== id);
               setInventories(remaining)
                 console.log('deleted');
             }
@@ -30,8 +32,9 @@ const ManageInventories = () => {
 
   return (
     <div>
-      <h2 className="title">Manage Inventories</h2>
-      <button className="btn btn-outline-primary mb-5 mt-3" type="submit">Add new item</button>
+      <h2 className="title mb-4">Manage Inventories</h2>
+      <button className="btn btn-outline-primary me-5 mb-4" type="submit">Add new item</button>
+      <button className="btn btn-outline-primary mb-4 " type="submit">Delivery</button>
 
       <table class="table">
   <thead>
@@ -57,7 +60,7 @@ const ManageInventories = () => {
                 <td>{item.quantity}</td>
 
                 <td>
-                <button className="btn btn-outline-success me-3" type="submit">Update stock</button>
+                <Link to="/myItem" className="btn btn-outline-success me-3" type="submit">Update stock</Link>
                   <button onClick={()=>handleUserDelete(item._id)} className="btn btn-outline-danger" type="submit">Delete</button>
                 </td>
               </tr>

@@ -1,11 +1,13 @@
 import React from "react";
 import Inventory from "../../Inventory/Inventory";
-import './Home.css'
+import Reviews from "../Reviews/Reviews";
+import "./Home.css";
 
 const Home = () => {
   return (
     <div>
-      <div className=""
+      <div
+        className=""
         id="carouselExampleCaptions"
         class="carousel slide"
         data-bs-ride="carousel"
@@ -41,9 +43,7 @@ const Home = () => {
             />
             <div class="carousel-caption d-none d-md-block">
               <h5>HATCHBACK CAR</h5>
-              <p>
-              Viewing all recently added vehicles. Start your buy now.
-              </p>
+              <p>Viewing all recently added vehicles. Start your buy now.</p>
             </div>
           </div>
           <div class="carousel-item">
@@ -54,9 +54,7 @@ const Home = () => {
             />
             <div class="carousel-caption d-none d-md-block">
               <h5>Ford Mustang Shelby </h5>
-              <p>
-              Viewing all recently added vehicles. Start your buy now.
-              </p>
+              <p>Viewing all recently added vehicles. Start your buy now.</p>
             </div>
           </div>
           <div class="carousel-item">
@@ -67,9 +65,7 @@ const Home = () => {
             />
             <div class="carousel-caption d-none d-md-block">
               <h5>Jaguar XJR</h5>
-              <p>
-              Viewing all recently added vehicles. Start your buy now.
-              </p>
+              <p>Viewing all recently added vehicles. Start your buy now.</p>
             </div>
           </div>
         </div>
@@ -93,12 +89,15 @@ const Home = () => {
         </button>
       </div>
 
-        {/* inventory items  */}
-        <div>
-            <h2 className="fs-1 mt-5 fw-bold text-danger">Inventory</h2>
-            <Inventory></Inventory>
-        </div>
-
+      {/* inventory items  */}
+      <div>
+        <h2 className="fs-1 mt-5 fw-bold text-danger">Inventory</h2>
+        <Inventory></Inventory>
+      </div>
+      <div>
+        <h2 className="fs-1 mt-5 mb-4 fw-bold text-danger">Popular Reviews</h2>
+        <Reviews></Reviews>
+      </div>
     </div>
   );
 };

@@ -17,7 +17,6 @@ const ItemDetail = () => {
            <input className="p-1 mb-4 w-25" type="number" name="number" placeholder="quantity" /> <br />
            <Link to="/manageInventories" className="btn btn-outline-dark me-5">Manage Inventories</Link>
            <button type="button" className="btn btn-outline-dark">Delivery</button>
-           div
        </div>
     );
 };

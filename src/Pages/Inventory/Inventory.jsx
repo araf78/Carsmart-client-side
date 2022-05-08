@@ -10,10 +10,10 @@ const Inventory = () => {
       .then((data) => setInventory(data));
   }, []);
 
-  const homeInventory = inventory.slice(0,4);
+  const homeInventory = inventory.slice(0,6);
 
   return (
-    <div className="row row-cols-12 row-cols-md-4 g-4 m-1">
+    <div className="row row-cols-12 row-cols-md-3 g-4 m-1">
       {homeInventory.map((item) => 
       {
         return <Item
