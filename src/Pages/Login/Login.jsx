@@ -6,12 +6,20 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWith
 import { getAuth } from "@firebase/auth";
 import app from "../../firebase.init";
 import { async } from "@firebase/util";
+import {   useLocation, useNavigate } from "react-router";
+
 
 const auth = getAuth(app);
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const from = location.state?.from?.pathname || "/";
+
 
   // sign in with email password 
   const [
@@ -26,6 +34,32 @@ const Login = () => {
 
   // send reset password 
   const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
+
+  const handleSignInWithEmailAndPassword =  ()=>{
+    signInWithEmailAndPassword(email, password)
+    .then(()=>{
+      if(user){
+        navigate(from, { replace: true })
+      }
+    })
+  }
+
+  const handleSignInWithGoogle = ()=>{
+    signInWithGoogle()
+    .then(()=>{
+      navigate(from, { replace: true })
+    })
+  }
+
+    {/* error handle 
+         */}
+         if (error) {
+          return (
+            <div>
+              <p>Error: {error}</p>
+            </div>
+          );
+        }
   
   return (
     <div className="login-container w-75 mx-auto p-3 rounded-2">
@@ -54,7 +88,7 @@ const Login = () => {
       <div className="d-flex flex-column w-50 mx-auto mt-3 mb-3">
           {/* login button  */}
         <button
-          onClick={()=>signInWithEmailAndPassword()}
+          onClick={handleSignInWithEmailAndPassword}
           className="  py-1 px-3 fs-4 rounded"
           type="button"
           class="btn btn-light"
@@ -72,7 +106,7 @@ const Login = () => {
         <h4 className="text-white mt-5 fs-5">or log With</h4>
         {/* google login  */}
         <button
-          onClick={()=> signInWithGoogle()}
+          onClick={handleSignInWithGoogle}
           className=" mt-3 py-1 px-3 align-items-center fs-3 rounded"
           type="button"
           class="btn btn-light"

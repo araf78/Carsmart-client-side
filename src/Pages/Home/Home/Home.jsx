@@ -1,4 +1,5 @@
 import React from "react";
+import Inventory from "../../Inventory/Inventory";
 import './Home.css'
 
 const Home = () => {
@@ -91,6 +92,13 @@ const Home = () => {
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+
+        {/* inventory items  */}
+        <div>
+            <h2 className="fs-1 mt-5 fw-bold text-danger">Inventory</h2>
+            <Inventory></Inventory>
+        </div>
+
     </div>
   );
 };
