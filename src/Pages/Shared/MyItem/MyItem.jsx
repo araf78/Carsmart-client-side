@@ -7,7 +7,7 @@ const MyItem = () => {
     const [item, setItem] = useState([]);
     useEffect(()=>{
        const getMyItems = async()=>{
-        const url = `http://localhost:5000/myItem`
+        const url = `https://afternoon-journey-23423.herokuapp.com/myItem`
         fetch(url)
         .then(res=> res.json())
         .then(data => setItem(data))

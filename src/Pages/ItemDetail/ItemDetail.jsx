@@ -7,10 +7,9 @@ const ItemDetail = () => {
     const {itemId} = useParams();
 
     const [item, setItem] = useState({});
-    const [reload, setReload] = useState(true);
 
     useEffect(()=>{
-        const url = `http://localhost:5000/item/${itemId}`;
+        const url = `https://afternoon-journey-23423.herokuapp.com/item/${itemId}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setItem(data))
@@ -18,9 +17,9 @@ const ItemDetail = () => {
  
     const handleItemQuantity =(event)=>{
         event.preventDefault();
-        const quantity = parseInt(item.quantity)-1;
+        const quantity = (item.quantity)-1;
         const newQuantity = quantity;
-        const url = `http://localhost:5000/item/${itemId}`;
+        const url = `https://afternoon-journey-23423.herokuapp.com/item/${itemId}`;
         fetch(url,{
             method:'PUT',
             headers:{
@@ -36,17 +35,6 @@ const ItemDetail = () => {
         })
     };
 
-   
-    // useEffect(()=>{
-    //     const url = `http://localhost:5000/item/${itemId}`;
-    //     fetch(url)
-    //     .then(res => res.json())
-    //     .then(data => setReload(data))
-    // },[itemId]);
-
-    //     const handleItemQuantity = ()=>{
-    //         const 
-    //     }
 
     return (
        <div>

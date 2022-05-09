@@ -100,7 +100,7 @@ const Home = () => {
         <Reviews></Reviews>
       </div>
       <div>
-        <h1 className="mt-5 fw-bold">Theme Core <span className="features">Features</span></h1>
+        <h1 className="mt-5 fw-bold">Theme Core <span className="features">Parts</span></h1>
         <CoreFeatures></CoreFeatures>
       </div>
     </div>
