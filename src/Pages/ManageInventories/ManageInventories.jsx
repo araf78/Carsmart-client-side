@@ -24,7 +24,6 @@ const ManageInventories = () => {
             if(data.deletedCount > 0){
               const remaining = inventories.filter(item => item._id !== id);
               setInventories(remaining)
-                console.log('deleted');
             }
         })
     }
@@ -33,16 +32,14 @@ const ManageInventories = () => {
   return (
     <div>
       <h2 className="title mb-4">Manage Inventories</h2>
-      <button className="btn btn-outline-primary me-5 mb-4" type="submit">Add new item</button>
-      <button className="btn btn-outline-primary mb-4 " type="submit">Delivery</button>
-
+      <Link to="/addNewItem" className="btn btn-outline-primary me-5 mb-4" type="submit">Add new item</Link>
       <table class="table">
   <thead>
     <tr>
       <th scope="col">*</th>
       <th scope="col">Name</th>
       <th scope="col">Price</th>
-      <th scope="col">Suplier Name</th>
+      <th scope="col">Supplier Name</th>
       <th scope="col">Quantity</th>
     </tr>
   </thead>

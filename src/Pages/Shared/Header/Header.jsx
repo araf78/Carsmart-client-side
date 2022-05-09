@@ -18,6 +18,7 @@ const Header = () => {
         <Link to="/">Home</Link>
         <Link to="/manageInventories">Manage Inventory</Link>
         <Link to="/blogs">Blogs</Link>
+        <Link to="/myitem">My Items</Link>
         {user?.uid ? (
           <button
             className="btn btn-outline-dark fw-bolder"

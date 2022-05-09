@@ -1,5 +1,6 @@
 import React from "react";
 import Inventory from "../../Inventory/Inventory";
+import CoreFeatures from "../CoreFeatures/CoreFeatures";
 import Reviews from "../Reviews/Reviews";
 import "./Home.css";
 
@@ -97,6 +98,10 @@ const Home = () => {
       <div>
         <h2 className="fs-1 mt-5 mb-4 fw-bold text-danger">Popular Reviews</h2>
         <Reviews></Reviews>
+      </div>
+      <div>
+        <h1 className="mt-5 fw-bold">Theme Core <span className="features">Features</span></h1>
+        <CoreFeatures></CoreFeatures>
       </div>
     </div>
   );

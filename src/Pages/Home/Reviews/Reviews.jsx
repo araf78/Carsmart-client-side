@@ -3,7 +3,7 @@ import React from "react";
 const Reviews = () => {
   return (
     <div className="container  px-4 ">
-      <div className="row gx-5 rounded-3 border border-dark">
+      <div className="row row-cols-1 row-cols-lg-1 gx-5 rounded-3 border border-dark">
         <div className="col">
           <div className="p-2">
               <img className="mt-2 rounded" src="https://demo.cmssuperheroes.com/themeforest/autosmart/wp-content/uploads/2017/06/porsche_gt34.jpg" alt="" />

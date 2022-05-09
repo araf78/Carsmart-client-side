@@ -1,0 +1,7 @@
+.container-feature{
+    background-color: rgba(0, 0, 0, 0.918);
+}
+.container-feature img{
+    width: 300px;
+    height: 100%;
+}

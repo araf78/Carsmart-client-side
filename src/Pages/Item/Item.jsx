@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 
 const Item = ({item}) => {
-    const {_id, name, img, description, quantity} = item;
+    const { name, img, description, quantity} = item;
     const navigate = useNavigate();
     // console.log(item)
 
@@ -20,7 +20,7 @@ const Item = ({item}) => {
           <h4>Quantity: {quantity}</h4>
           <p className="card-text">{description}</p>
         </div>
-        <Link to="/item/:id" className="card-footer bg-danger">
+        <Link to={`/item/${item._id}`} className="card-footer bg-danger">
           <small className=" text-light">Update</small>
         </Link>
       </div>

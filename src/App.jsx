@@ -8,6 +8,7 @@ import ItemDetail from './Pages/ItemDetail/ItemDetail'
 import Login from './Pages/Login/Login'
 import ManageInventories from './Pages/ManageInventories/ManageInventories'
 import RequireAuth from './Pages/RequireAuth/RequireAuth'
+import AddNewItem from './Pages/Shared/AddNewItem/AddNewItem'
 import Footer from './Pages/Shared/Footer/Footer'
 import Header from './Pages/Shared/Header/Header'
 import MyItem from './Pages/Shared/MyItem/MyItem'
@@ -23,12 +24,17 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/inventory" element={<Inventory></Inventory>}></Route>
-        <Route path="/item/:id" element={
+        <Route path="/item/:itemId" element={
           <RequireAuth>
             <ItemDetail></ItemDetail>
           </RequireAuth>
         }></Route>
-        <Route path="/manageInventories" element={<ManageInventories></ManageInventories>}></Route>
+        <Route path="/manageInventories" element={
+          <RequireAuth>
+            <ManageInventories></ManageInventories>
+          </RequireAuth>
+        }></Route>
+        <Route path="/addNewItem" element={<AddNewItem></AddNewItem>}></Route>
         <Route path="/myitem" element={<MyItem></MyItem>}></Route>
         <Route path="/blogs" element={<Bloogs></Bloogs>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
